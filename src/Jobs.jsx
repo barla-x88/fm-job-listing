@@ -4,6 +4,7 @@ const Jobs = (props) => {
 
   const filteredJobs = jobs.filter((job) => {
     if (filters.length === 0) return true;
+
     if (filters.includes(job.role)) return true;
 
     if (job.languages.some((language) => filters.includes(language)))
