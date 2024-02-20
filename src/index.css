@@ -36,7 +36,8 @@ div.filter {
 .filter-boxes {
   display: flex;
   flex-wrap: wrap;
-  background-color: var(--light-text);
+  gap: 10px;
+  background-color: #ffffff;
   padding: 15px;
   width: 90%;
   margin: 0 auto;
