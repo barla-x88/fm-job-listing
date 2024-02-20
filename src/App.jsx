@@ -1,8 +1,10 @@
+import JobListing from './JobListing';
+
 function App() {
   return (
-    <>
-      <h1>Job Listing</h1>
-    </>
+    <div>
+      <JobListing />
+    </div>
   );
 }
 
