@@ -30,4 +30,16 @@ div.filter {
   background: url('./images/bg-header-mobile.svg') no-repeat, #5da5a4;
   background-size: cover;
   height: 150px;
+  position: relative;
+}
+
+.filter-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--light-text);
+  padding: 15px;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  top: 130px;
 }
