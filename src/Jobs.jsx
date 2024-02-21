@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
+import Filter from './Filter';
 const Jobs = (props) => {
-  const { jobs, filters, addToFilter } = props;
+  const { jobs, filters, addToFilter, filterChange, clearFilters } = props;
 
   const filteredJobs = jobs.filter((job) => {
     //return all jobs if no filter is applied
@@ -15,6 +16,14 @@ const Jobs = (props) => {
   console.log(filteredJobs);
   return (
     <section className="jobs">
+      {/* Filters */}
+      <Filter
+        filterChange={filterChange}
+        filters={filters}
+        clearFilters={clearFilters}
+      />
+
+      {/* Jobs List */}
       {filteredJobs.map((job) => (
         <div key={job.id} className="job">
           <div className="job-logo">

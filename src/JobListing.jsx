@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Filter from './Filter';
+
 import Jobs from './Jobs';
 import data from './data.json';
 
@@ -28,12 +28,14 @@ const JobListing = () => {
 
   return (
     <>
-      <Filter
-        filterChange={filterChange}
+      <div className="page-header"></div>
+      <Jobs
+        jobs={data}
         filters={currentFilter}
+        addToFilter={addToFilter}
+        filterChange={filterChange}
         clearFilters={clearFilters}
       />
-      <Jobs jobs={data} filters={currentFilter} addToFilter={addToFilter} />
     </>
   );
 };

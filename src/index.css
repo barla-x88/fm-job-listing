@@ -4,7 +4,7 @@
   --light-text: hsl(180, 31%, 95%);
   --dark-text: hsl(180, 8%, 52%);
   --highlight-text: hsl(180, 14%, 20%);
-  --box-shadow: 0px 2px 2px #4949491c;
+  --box-shadow: 0px 10px 10px #4949491c;
 }
 
 html {
@@ -31,25 +31,39 @@ body {
   background: url('./images/bg-header-mobile.svg') no-repeat, #5da5a4;
   background-size: cover;
   height: 156px;
+}
+
+.jobs {
   position: relative;
 }
 
 .filter-btns {
-  display: none;
-  width: 85%;
-  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  visibility: hidden;
   padding-right: 16px;
   background-color: #ffffff;
-  position: relative;
-  top: 118px;
   border-radius: 5px;
+
+  position: relative;
+  top: -36px;
+}
+
+.filter-btns::after,
+.job::after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   box-shadow: var(--box-shadow);
 }
 
 .show-btns {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  visibility: visible;
 }
 
 .filter-boxes {
@@ -110,9 +124,30 @@ input[type='checkbox']:hover::before {
 }
 
 .jobs {
-  margin-top: 54px;
+  width: 88%;
+  margin: 0 auto;
 }
 
-.with-filter {
-  margin-top: 136px;
+.job {
+  background-color: #ffffff;
+  margin-bottom: 36px;
+  padding: 32px 22px 22px 22px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.jobs > div:nth-of-type(2) {
+  margin-top: 18px;
+}
+
+.job-logo {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -25px;
+  left: 16px;
+}
+
+.job-logo img {
+  max-width: 100%;
 }

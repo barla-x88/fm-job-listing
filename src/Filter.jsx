@@ -3,7 +3,7 @@ const Filter = (props) => {
   const { filterChange, filters, clearFilters } = props;
 
   return (
-    <div className="page-header">
+    <>
       <div
         className={filters.length > 0 ? 'filter-btns show-btns' : 'filter-btns'}
       >
@@ -26,7 +26,7 @@ const Filter = (props) => {
           </button>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 export default Filter;
