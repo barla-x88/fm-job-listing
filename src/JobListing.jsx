@@ -6,22 +6,35 @@ import data from './data.json';
 const JobListing = () => {
   const [currentFilter, setCurrentFilter] = useState([]);
 
+  //handles filter removal
   const filterChange = (e) => {
-    if (e.target.checked) {
-      setCurrentFilter([...currentFilter, e.target.value]);
-    } else {
-      const newFilter = [...currentFilter].filter(
-        (filter) => filter !== e.target.value
-      );
-      setCurrentFilter(newFilter);
-    }
+    const newFilter = [...currentFilter].filter(
+      (filter) => filter !== e.target.value
+    );
+    setCurrentFilter(newFilter);
+  };
+
+  //adds new filter
+  const addToFilter = (e) => {
+    const newFilters = [...currentFilter, e.target.textContent];
+    setCurrentFilter(newFilters);
+  };
+
+  //clear all filters
+
+  const clearFilters = () => {
+    setCurrentFilter([]);
   };
 
   return (
-    <div>
-      <Filter data={data} filterChange={filterChange} />
-      <Jobs jobs={data} filters={currentFilter} />
-    </div>
+    <>
+      <Filter
+        filterChange={filterChange}
+        filters={currentFilter}
+        clearFilters={clearFilters}
+      />
+      <Jobs jobs={data} filters={currentFilter} addToFilter={addToFilter} />
+    </>
   );
 };
 export default JobListing;

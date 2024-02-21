@@ -2,9 +2,9 @@ import JobListing from './JobListing';
 
 function App() {
   return (
-    <div>
+    <main>
       <JobListing />
-    </div>
+    </main>
   );
 }
 
