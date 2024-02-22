@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..700&display=swap');
+
 :root {
   /* COLORS */
   --page-bg: hsl(180, 52%, 96%);
@@ -24,6 +26,8 @@ body {
   font-size: 1.5rem;
   background-color: var(--page-bg);
   min-height: 100vh;
+  font-family: 'League Spartan', sans-serif;
+  font-optical-sizing: auto;
 }
 
 .page-header {
@@ -44,7 +48,7 @@ body {
   visibility: hidden;
   padding-right: 16px;
   background-color: #ffffff;
-  border-radius: 5px;
+  border-radius: 6px;
 
   position: relative;
   top: -36px;
@@ -85,29 +89,31 @@ body {
 
 label {
   margin-left: 8px;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 1.6rem;
 }
 
 input[type='checkbox'] {
   display: grid;
   place-content: center;
   margin-left: 12px;
-  width: 22px;
-  height: 22px;
+  width: 26px;
+  height: 26px;
   appearance: none;
 }
 
 input[type='checkbox']::before {
   content: 'X';
   color: #ffffff;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 600;
-  width: 22px;
-  height: 22px;
+  width: 26px;
+  height: 26px;
   display: grid;
   place-items: center;
   background-color: #5da5a4;
   z-index: 1;
+  border-radius: 0 5px 5px 0;
 }
 
 input[type='checkbox']:hover::before {
@@ -121,6 +127,7 @@ input[type='checkbox']:hover::before {
   font-weight: bold;
   color: var(--dark-text);
   cursor: pointer;
+  font-size: 1.5rem;
 }
 
 .jobs {
@@ -130,10 +137,14 @@ input[type='checkbox']:hover::before {
 
 .job {
   background-color: #ffffff;
-  margin-bottom: 36px;
+  margin-bottom: 42px;
   padding: 32px 22px 22px 22px;
-  border-radius: 5px;
+  border-radius: 6px;
   position: relative;
+}
+
+.featured-job {
+  border-left: 5px solid #5da5a4;
 }
 
 .jobs > div:nth-of-type(2) {
@@ -150,4 +161,73 @@ input[type='checkbox']:hover::before {
 
 .job-logo img {
   max-width: 100%;
+}
+
+.job-tags {
+  border-top: 1px solid var(--dark-text);
+  padding-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.tag {
+  border: none;
+  color: #5da5a4;
+  font-weight: 700;
+  background-color: var(--page-bg);
+  padding: 6px 8px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
+
+.company {
+  color: #5da5a4;
+  font-size: 1.6rem;
+}
+
+.desc-header {
+  margin-top: 10px;
+  display: flex;
+  gap: 22px;
+  font-weight: 700;
+}
+
+.is-new,
+.is-featured {
+  color: var(--light-text);
+  padding: 6px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.is-new {
+  background-color: #5da5a4;
+}
+
+.is-featured {
+  background-color: var(--highlight-text);
+  margin-left: 10px;
+}
+
+.job-position,
+.job-info {
+  margin: 20px 0;
+}
+
+.job-position {
+  font-weight: 700;
+  color: var(--highlight-text);
+}
+
+.job-info ul {
+  display: flex;
+  list-style-position: outside;
+  font-weight: 500;
+  color: var(--dark-text);
+  gap: 26px;
+}
+
+.job-info ul li:first-of-type {
+  list-style-type: none;
 }
