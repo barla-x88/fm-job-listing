@@ -132,6 +132,7 @@ input[type='checkbox']:hover::before {
 
 .jobs {
   width: 88%;
+  max-width: 316px;
   margin: 0 auto;
 }
 
@@ -141,6 +142,7 @@ input[type='checkbox']:hover::before {
   padding: 32px 22px 22px 22px;
   border-radius: 6px;
   position: relative;
+  min-height: 256px;
 }
 
 .featured-job {
