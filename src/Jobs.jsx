@@ -9,7 +9,10 @@ const Jobs = (props) => {
 
     if (filters.includes(job.role) || filters.includes(job.level)) return true;
 
-    if (job.languages.some((language) => filters.includes(language)))
+    if (
+      job.languages.some((language) => filters.includes(language)) ||
+      job.tools.some((tool) => filters.includes(tool))
+    )
       return true;
   });
 
@@ -49,16 +52,18 @@ const Jobs = (props) => {
             </div>
           </div>
           <div className="job-tags">
-            {[job.role, job.level, ...job.languages].map((tag, i) => (
-              <button
-                type="button"
-                className="tag"
-                key={i}
-                onClick={addToFilter}
-              >
-                {tag}
-              </button>
-            ))}
+            {[job.role, job.level, ...job.languages, ...job.tools].map(
+              (tag, i) => (
+                <button
+                  type="button"
+                  className="tag"
+                  key={i}
+                  onClick={addToFilter}
+                >
+                  {tag}
+                </button>
+              )
+            )}
           </div>
         </div>
       ))}
