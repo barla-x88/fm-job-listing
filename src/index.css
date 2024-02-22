@@ -189,16 +189,17 @@ input[type='checkbox']:hover::before {
 }
 
 .desc-header {
-  margin-top: 10px;
   display: flex;
+  align-items: center;
   gap: 22px;
   font-weight: 700;
 }
 
 .is-new,
 .is-featured {
+  display: inline-block;
   color: var(--light-text);
-  padding: 6px 10px;
+  padding: 8px 10px 6px;
   border-radius: 12px;
   text-transform: uppercase;
 }
