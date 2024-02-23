@@ -32,7 +32,7 @@ body {
 
 .page-header {
   background-color: #5da5a4;
-  background: url('./images/bg-header-mobile.svg') no-repeat, #5da5a4;
+  background: url('./assets/images/bg-header-mobile.svg') no-repeat, #5da5a4;
   background-size: cover;
   height: 156px;
 }
@@ -248,7 +248,7 @@ input[type='checkbox']:hover::before {
 
 @media (min-width: 1024px) {
   .page-header {
-    background: url('./images/bg-header-desktop.svg') no-repeat, #5da5a4;
+    background: url('./assets/images/bg-header-desktop.svg') no-repeat, #5da5a4;
     background-size: cover;
   }
 
