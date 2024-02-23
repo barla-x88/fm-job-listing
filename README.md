@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github Repo](#)
-- Live Site URL: [Live Site](#)
+- Solution URL: [Github Repo](https://github.com/barla-x88/fm-job-listing)
+- Live Site URL: [Live Site](https://fm-jobs.netlify.app/)
 
 ## My process
 
