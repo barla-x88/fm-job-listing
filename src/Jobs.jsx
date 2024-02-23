@@ -3,20 +3,6 @@ import Filter from './Filter';
 const Jobs = (props) => {
   const { jobs, filters, addToFilter, filterChange, clearFilters } = props;
 
-  const filteredJobs = jobs.filter((job) => {
-    //return all jobs if no filter is applied
-    if (filters.length === 0) return true;
-
-    if (filters.includes(job.role) || filters.includes(job.level)) return true;
-
-    if (
-      job.languages.some((language) => filters.includes(language)) ||
-      job.tools.some((tool) => filters.includes(tool))
-    )
-      return true;
-  });
-
-  console.log(filteredJobs);
   return (
     <section className="jobs">
       {/* Filters */}
@@ -27,7 +13,7 @@ const Jobs = (props) => {
       />
 
       {/* Jobs List */}
-      {filteredJobs.map((job) => (
+      {jobs.map((job) => (
         <div key={job.id} className={job.featured ? 'job featured-job' : 'job'}>
           <div className="job-logo">
             <img src={job.logo} alt={job.company} />

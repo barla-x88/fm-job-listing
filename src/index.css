@@ -216,6 +216,7 @@ input[type='checkbox']:hover::before {
 .job-position,
 .job-info {
   margin: 20px 0;
+  font-size: 1.6rem;
 }
 
 .job-position {
