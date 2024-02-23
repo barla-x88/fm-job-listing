@@ -132,7 +132,7 @@ input[type='checkbox']:hover::before {
 
 .jobs {
   width: 88%;
-  max-width: 316px;
+  /* max-width: 316px; */
   margin: 0 auto;
 }
 
@@ -142,7 +142,6 @@ input[type='checkbox']:hover::before {
   padding: 32px 22px 22px 22px;
   border-radius: 6px;
   position: relative;
-  min-height: 256px;
 }
 
 .featured-job {
@@ -183,6 +182,12 @@ input[type='checkbox']:hover::before {
   border-radius: 5px;
 }
 
+.tag:hover {
+  background-color: #5da5a4;
+  color: var(--light-text);
+  cursor: pointer;
+}
+
 .company {
   color: #5da5a4;
   font-size: 1.6rem;
@@ -215,13 +220,18 @@ input[type='checkbox']:hover::before {
 
 .job-position,
 .job-info {
-  margin: 20px 0;
+  margin: 16px 0;
   font-size: 1.6rem;
 }
 
 .job-position {
   font-weight: 700;
   color: var(--highlight-text);
+}
+
+.job-position:hover {
+  color: #5da5a4;
+  cursor: pointer;
 }
 
 .job-info ul {
@@ -234,4 +244,40 @@ input[type='checkbox']:hover::before {
 
 .job-info ul li:first-of-type {
   list-style-type: none;
+}
+
+@media (min-width: 1024px) {
+  .page-header {
+    background: url('./images/bg-header-desktop.svg') no-repeat, #5da5a4;
+    background-size: cover;
+  }
+
+  .jobs {
+    max-width: 1110px;
+  }
+
+  .job {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 35px;
+  }
+
+  .job-position {
+    font-size: 1.8rem;
+  }
+
+  .job-logo {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+  }
+
+  .job-tags {
+    border-top: none;
+    padding-top: 0;
+    margin-left: auto;
+  }
 }
