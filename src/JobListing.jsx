@@ -67,6 +67,7 @@ const JobListing = () => {
 
   const clearFilters = () => {
     setCurrentFilter([]);
+    setCurrentJobs([...data]);
   };
 
   return (
