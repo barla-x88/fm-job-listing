@@ -56,5 +56,5 @@ Users should be able to:
 ## Author
 
 - Website - [Ankit Barla](https://barla-x88.github.io/portfolio/)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/barla-x88)
-- Twitter - [@yourusername](https://twitter.com/BarlaX88)
+- Frontend Mentor - [@barla-x88](https://www.frontendmentor.io/profile/barla-x88)
+- Twitter - [@BarlaX88](https://twitter.com/BarlaX88)
